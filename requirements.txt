@@ -1,0 +1,32 @@
+# ══════════════════════════════════════════════════════════════
+#  S2Cool Digital Twin — System Python Requirements
+#  Install with: pip install -r requirements.txt
+#
+#  These packages are required for:
+#    predictor.py        — ML inference + data feeding
+#    humidifier_graph.py — live humidifier visualization
+#    hx_graph.py         — live heat exchanger visualization
+#
+#  NOT required inside Omniverse (main_connector.py uses
+#  built-in omni.* modules only)
+# ══════════════════════════════════════════════════════════════
+
+# ── Data ──────────────────────────────────────────────────────
+pandas>=1.5.0
+numpy>=1.23.0
+openpyxl>=3.0.10
+
+# ── ML Models ─────────────────────────────────────────────────
+scikit-learn>=1.1.0
+xgboost>=1.7.0
+joblib>=1.2.0
+
+# ── Visualization ─────────────────────────────────────────────
+matplotlib>=3.6.0
+
+# ── Built-in (no install needed) ──────────────────────────────
+# socket
+# json
+# subprocess
+# threading
+# os
