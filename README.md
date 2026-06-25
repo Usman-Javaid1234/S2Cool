@@ -187,7 +187,6 @@ This will automatically:
 | Predictor console | Row-by-row feed log with predictions |
 
 ---
-
 ## Adjusting Speed
 
 To slow down or speed up the data feed, change `INTERVAL` in `predictor.py`:
@@ -203,6 +202,21 @@ ani = animation.FuncAnimation(fig, update, interval=1000, ...)
 # interval is in milliseconds — should equal INTERVAL × 1000
 ```
 
+## Changing the Input Data File
+
+To use a different session or Excel file, update this line in `predictor.py`:
+
+```python
+EXCEL_PATH = os.path.join(BASE_DIR, "model_inputs", "s2_model_inputs.xlsx")
+```
+
+Replace `s2_model_inputs.xlsx` with your file name, for example:
+
+```python
+EXCEL_PATH = os.path.join(BASE_DIR, "model_inputs", "s7_model_inputs.xlsx")
+```
+
+The file must be placed in the `model_inputs/` folder and have the sheet name `ModelInputs` with columns `Time`, `T_WA_in`, `T_wb`, `T_SA_in`, `T_SA_out`.
 ---
 
 ## Ports Used
